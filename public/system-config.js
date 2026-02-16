@@ -163,11 +163,11 @@ const systemConfig = {
   },
 
   store: {
-    storeName: 'Premium 111 - Ticket System',
-    storeDescription: 'Premium Store System',
-    storeTitle: 'Store System',
-    welcomePrefix: 'مرحباً ',
-    paypalClientId: 'ARq3InItpUR8jknkVyCtQIXTQwsHSeOvKdURLEretiaEDBVfmwo0voanVeZ4GCIGbkejtYVOtg6WKpAX', // change this to your  ClientId   # paypal <<<
+    storeName: 'Narwhal Hosting - Ticket System',
+    storeDescription: 'Narwhal Hosting Store',
+    storeTitle: 'Narwhal Hosting',
+    welcomePrefix: 'Welcome',
+    paypalClientId: 'BAAzjwBj_o6fGTzB-kyphvhayIsiWvFDTch6my0E2n72hwOvDIrayPGWZG58sLjz-4PxWcCt90QxpBoAC4',
     currency: 'USD',
     defaultProductImage: 'https://via.placeholder.com/300x200/7e69ab/ffffff?text=Product',
     toastDuration: 5000,
