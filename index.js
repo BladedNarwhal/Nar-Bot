@@ -1179,7 +1179,7 @@ function getMediaUrl(filename, mediaType) {
 client.login(process.env.BOT_TOKEN);
 
 client.on("clientReady", async () => {
-    console.log(colors.bold.green('✅  BOT IS NOW ONLINE AND READY!'));
+	console.log("Systems online);
     initializeDailyStats();
     await sendTicketMessage();
     updateDiscordStats();
