@@ -1179,7 +1179,7 @@ function getMediaUrl(filename, mediaType) {
 client.login(process.env.BOT_TOKEN);
 
 client.on("clientReady", async () => {
-	        console.log(colors.bold.blue('╭─') + colors.bold.white(' SYSTEM INFORMATION ') + colors.bold.blue('─────────────────────────────────────────────────╮'));
+	    console.log(colors.bold.blue('╭─') + colors.bold.white(' SYSTEM INFORMATION ') + colors.bold.blue('─────────────────────────────────────────────────╮'));
         console.log(colors.blue('│'));
         console.log(colors.blue('│  ') + colors.blue('📦') + colors.white('  Version    : ') + colors.bold.white(`v${packageFile.version}`));
         console.log(colors.blue('│  ') + colors.blue('⚙️') + colors.white('  Node       : ') + colors.bold.white(process.version));
