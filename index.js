@@ -1178,8 +1178,15 @@ function getMediaUrl(filename, mediaType) {
 
 client.login(process.env.BOT_TOKEN);
 
-client.on("ready", async () => {
-    console.log("Discord bot logged in successfully");
+client.on("clientReady", async () => {
+	        console.log(colors.bold.blue('╭─') + colors.bold.white(' SYSTEM INFORMATION ') + colors.bold.blue('─────────────────────────────────────────────────╮'));
+        console.log(colors.blue('│'));
+        console.log(colors.blue('│  ') + colors.blue('📦') + colors.white('  Version    : ') + colors.bold.white(`v${packageFile.version}`));
+        console.log(colors.blue('│  ') + colors.blue('⚙️') + colors.white('  Node       : ') + colors.bold.white(process.version));
+        console.log(colors.blue('│  ') + colors.blue('🕐') + colors.white('  Start Time : ') + colors.bold.white(startTime.toLocaleString()));
+        console.log(colors.blue('│  ') + colors.blue('💾') + colors.white('  Memory     : ') + colors.bold.white(`${(used.heapUsed / 1024 / 1024).toFixed(2)} MB`));
+        console.log(colors.blue('╰──────────────────────────────────────────────────────────────────────╯'));
+    console.log(colors.bold.green('✅  BOT IS NOW ONLINE AND READY!'));
     initializeDailyStats();
     await sendTicketMessage();
     updateDiscordStats();
