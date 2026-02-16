@@ -1179,7 +1179,7 @@ function getMediaUrl(filename, mediaType) {
 client.login(process.env.BOT_TOKEN);
 
 client.on("clientReady", async () => {
-	console.log("Systems online);
+	console.log("Systems online");
     initializeDailyStats();
     await sendTicketMessage();
     updateDiscordStats();
@@ -3546,4 +3546,3 @@ const PORT = process.env.PORT || 22009;
 server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
-// Community Server TovStudio # === https://discord.com/invite/CfvKc2aqxj
