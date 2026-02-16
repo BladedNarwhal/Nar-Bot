@@ -863,7 +863,7 @@ async function sendAdminNotification(ticket, message = null) {
                                 .setColor(config.visual.colors.success)
                                 .setThumbnail(avatarUrl)
                                 .setTimestamp()
-                                .setURL(`http://${process.env.HOST || "localhost"}:${process.env.PORT}`)
+                                .setURL`https://${process.env.HOST}`(`http://${process.env.HOST || "localhost"}:${process.env.PORT}`)
                         ]
                     });
                 } catch (error) {
@@ -893,7 +893,7 @@ async function sendUserNotification(userId, ticketId, message) {
                 .setThumbnail(avatarUrl)
                 .setAuthor({ name: message.username, iconURL: avatarUrl })
                 .setTimestamp()
-                .setURL(`http://${process.env.HOST || "localhost"}:${process.env.PORT}`);
+                .setURL`https://${process.env.HOST}`(`http://${process.env.HOST || "localhost"}:${process.env.PORT}`);
             
             if (message.attachments && message.attachments.length > 0) {
                 embed.setImage(message.attachments[0]);
@@ -924,7 +924,7 @@ async function sendTicketStatusNotification(userId, ticket, status, admin) {
                         .setThumbnail(avatarUrl)
                         .setAuthor({ name: admin.username, iconURL: avatarUrl })
                         .setTimestamp()
-                        .setURL(`https://${process.env.HOST}`)
+                        .setURL`https://${process.env.HOST}`(`https://${process.env.HOST}`)
                 ]
             });
         }
@@ -951,7 +951,7 @@ async function sendTicketAcceptedNotification(userId, ticket, admin) {
                         .setThumbnail(avatarUrl)
                         .setAuthor({ name: admin.username, iconURL: avatarUrl })
                         .setTimestamp()
-                        .setURL(`https://${process.env.HOST}`)
+                        .setURL`https://${process.env.HOST}`(`https://${process.env.HOST}`)
                 ]
             });
         }
