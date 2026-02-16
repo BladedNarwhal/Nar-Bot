@@ -1181,7 +1181,7 @@ client.login(process.env.BOT_TOKEN);
 client.on("ready", async () => {
     console.log('✅  BOT IS NOW ONLINE AND READY!');
     initializeDailyStats();
-    await sendTicketMessage();
+    //await sendTicketMessage();
     updateDiscordStats();
     
     setInterval(updateDiscordStats, 5 * 60 * 1000);
@@ -3544,5 +3544,5 @@ app.get("/Settings", (req, res) => {
 const PORT = process.env.PORT || 22009;
 
 server.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(``);
 });
