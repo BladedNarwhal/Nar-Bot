@@ -727,7 +727,7 @@ async function sendExpiryWarningNotification(userId, product, purchase, daysLeft
         console.error("Error sending expiry warning notification:", error);
     }
 }
-// Community Server TovStudio # === https://discord.com/invite/CfvKc2aqxj
+
 async function sendExpiryNotification(userId, product, purchase) {
     try {
         const guild = await client.guilds.fetch(process.env.GUILD_ID);
@@ -757,7 +757,7 @@ async function sendExpiryNotification(userId, product, purchase) {
         console.error("Error sending expiry notification:", error);
     }
 }
-// Community Server TovStudio
+
 function checkExpiringPurchases() {
     try {
         const now = Date.now();
@@ -1186,7 +1186,6 @@ client.on("ready", async () => {
     
     setInterval(updateDiscordStats, 5 * 60 * 1000);
     
-    // Check expiring purchases daily # # === https://discord.com/invite/CfvKc2aqxj Community Server TovStudio
     setInterval(checkExpiringPurchases, 24 * 60 * 60 * 1000);
 });
 
