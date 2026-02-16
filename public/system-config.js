@@ -36,7 +36,7 @@ const systemConfig = {
     ticketCooldownMinutes: 5,
     maxAttachments: 5,
     maxMessageLength: 500,
-    defaultLanguage: 'ar',
+    defaultLanguage: 'en',
     ticketPanelEnabled: true,
     toastDuration: 5000,
     rateLimitMessages: 1000
