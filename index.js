@@ -924,7 +924,7 @@ async function sendTicketStatusNotification(userId, ticket, status, admin) {
                         .setThumbnail(avatarUrl)
                         .setAuthor({ name: admin.username, iconURL: avatarUrl })
                         .setTimestamp()
-                        .setURL(`http://${process.env.HOST || "localhost"}:${process.env.PORT}`)
+                        .setURL(`https://${process.env.HOST}`)
                 ]
             });
         }
@@ -951,7 +951,7 @@ async function sendTicketAcceptedNotification(userId, ticket, admin) {
                         .setThumbnail(avatarUrl)
                         .setAuthor({ name: admin.username, iconURL: avatarUrl })
                         .setTimestamp()
-                        .setURL(`http://${process.env.HOST || "localhost"}:${process.env.PORT}`)
+                        .setURL(`https://${process.env.HOST}`)
                 ]
             });
         }

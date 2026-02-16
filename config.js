@@ -2,7 +2,7 @@
 const config = {
   messages: {
     // Discord ticket system messages
-    ticketButtonResponse: (host, port) => `You can open a new ticket through this link: http://${host || "localhost"}:${port}`,
+    ticketButtonResponse: (host, port) => `You can open a new ticket through this link: https://${host}`,
     ticketEmbedTitle: "Support Ticket System",
     ticketEmbedDescription: "Welcome to our support system!\n\nClick the button below to open a new ticket and get help from our team.",
     ticketButtonLabel: "🎫 Open New Ticket",
@@ -28,12 +28,6 @@ const config = {
       'closed': 'Closed', 
       'frozen': 'Frozen',
       'on-hold': 'On Hold'
-    },
-    statusLabelsArabic: {
-      'open': 'مفتوحة',
-      'closed': 'مغلقة',
-      'frozen': 'مجمدة', 
-      'on-hold': 'قيد الانتظار'
     },
     
     // Error messages

@@ -1,1 +1,4 @@
 .env
+.cache
+.npm
+node_modules
