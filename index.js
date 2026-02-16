@@ -727,7 +727,7 @@ async function sendExpiryWarningNotification(userId, product, purchase, daysLeft
         console.error("Error sending expiry warning notification:", error);
     }
 }
-
+// Community Server TovStudio # === https://discord.com/invite/CfvKc2aqxj
 async function sendExpiryNotification(userId, product, purchase) {
     try {
         const guild = await client.guilds.fetch(process.env.GUILD_ID);
@@ -757,7 +757,7 @@ async function sendExpiryNotification(userId, product, purchase) {
         console.error("Error sending expiry notification:", error);
     }
 }
-
+// Community Server TovStudio
 function checkExpiringPurchases() {
     try {
         const now = Date.now();
@@ -863,7 +863,7 @@ async function sendAdminNotification(ticket, message = null) {
                                 .setColor(config.visual.colors.success)
                                 .setThumbnail(avatarUrl)
                                 .setTimestamp()
-                                .setURL`https://${process.env.HOST}`(`http://${process.env.HOST || "localhost"}:${process.env.PORT}`)
+                                .setURL(`http://${process.env.HOST || "localhost"}:${process.env.PORT}`)
                         ]
                     });
                 } catch (error) {
@@ -893,7 +893,7 @@ async function sendUserNotification(userId, ticketId, message) {
                 .setThumbnail(avatarUrl)
                 .setAuthor({ name: message.username, iconURL: avatarUrl })
                 .setTimestamp()
-                .setURL`https://${process.env.HOST}`(`http://${process.env.HOST || "localhost"}:${process.env.PORT}`);
+                .setURL(`http://${process.env.HOST || "localhost"}:${process.env.PORT}`);
             
             if (message.attachments && message.attachments.length > 0) {
                 embed.setImage(message.attachments[0]);
@@ -924,7 +924,7 @@ async function sendTicketStatusNotification(userId, ticket, status, admin) {
                         .setThumbnail(avatarUrl)
                         .setAuthor({ name: admin.username, iconURL: avatarUrl })
                         .setTimestamp()
-                        .setURL`https://${process.env.HOST}`(`https://${process.env.HOST}`)
+                        .setURL(`http://${process.env.HOST || "localhost"}:${process.env.PORT}`)
                 ]
             });
         }
@@ -951,7 +951,7 @@ async function sendTicketAcceptedNotification(userId, ticket, admin) {
                         .setThumbnail(avatarUrl)
                         .setAuthor({ name: admin.username, iconURL: avatarUrl })
                         .setTimestamp()
-                        .setURL`https://${process.env.HOST}`(`https://${process.env.HOST}`)
+                        .setURL(`http://${process.env.HOST || "localhost"}:${process.env.PORT}`)
                 ]
             });
         }
@@ -1178,8 +1178,8 @@ function getMediaUrl(filename, mediaType) {
 
 client.login(process.env.BOT_TOKEN);
 
-client.on("clientReady", async () => {
-	console.log("Systems online");
+client.on("ready", async () => {
+    console.log('✅  BOT IS NOW ONLINE AND READY!');
     initializeDailyStats();
     await sendTicketMessage();
     updateDiscordStats();
